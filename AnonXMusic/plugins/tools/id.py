@@ -57,4 +57,4 @@ async def heart(client, query: CallbackQuery):
     else:
          id[usr.id].remove(query.from_user.mention)
     idd = len(id[usr.id])
-    await query.edit_message_text(f"**name : {usr.first_name}\nid : {usr.id}\nuser : [@{usr.username}]\nbio : {usr.bio}**", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(f"{idd} 🤍", callback_data=f"heart{usr.id}")]]))
+    await query.edit_message_text(f"**name : {usr.first_name}\nid : {usr.id}\nuser : [@{usr.username}]\nbio : {usr.bio}**", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(f"{idd} 💕", callback_data=f"heart{usr.id}")]]))
